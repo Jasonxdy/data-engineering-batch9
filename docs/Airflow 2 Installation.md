@@ -198,7 +198,7 @@ sudo systemctl status airflow-scheduler
 이는 airflow계정에서 실행되어야 한다. password의 값을 적당히 다른 값으로 바꾼다
 
 ```
-AIRFLOW_HOME=/var/lib/airflow airflow users  create --role Admin --username admin --email admin --firstname admin --lastname admin --password admin1234
+AIRFLOW_HOME=/var/lib/airflow airflow users  create --role Admin --username admin --email admin --firstname admin --lastname admin --password admin4321
 ```
 
 만일 실수로 위의 명령을 ubuntu 어카운트에서 실행했다면 admin 계정을 먼저 지워야한다. 지울 때 아래 명령을 사용한다
