@@ -6,6 +6,7 @@ airflow@ip-172-31-xx-xxx:~$ cd dags
 airflow@ip-172-31-xx-xxx:~/dags$ pwd
 /var/lib/airflow/dags
 ```
+
 4. 숙제를 위한 DAG 작성을 위해 파이썬 파일을 하나 vi 에디터로 오픈합니다. 다음과 같은 내용으로 파일을 일단 만듭니다
 ```
 from airflow import DAG
@@ -48,4 +49,9 @@ task1 = PythonOperator(
     task_id = 'task1',
     python_callable = run,
     dag = dag)
-```    
+```
+
+5. 위와 같은 세팅의 DAG(ID가 MyDAG_ID)에서 task(ID가 task1)를 실행하려면 아래와 같이 실행합니다
+```
+airflow tasks test MyDAG_ID task1 YYYY-MM-DD
+```
