@@ -16,7 +16,7 @@ import json
 
 dag = DAG(
     dag_id = 'MySQL_to_Redshift_v2',
-    start_date = datetime(2021,11,27), # 날짜가 미래인 경우 실행이 안됨
+    start_date = datetime(2022,8,24), # 날짜가 미래인 경우 실행이 안됨
     schedule_interval = '0 9 * * *',  # 적당히 조절
     max_active_runs = 1,
     catchup = True,
