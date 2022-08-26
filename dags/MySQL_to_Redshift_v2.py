@@ -57,7 +57,7 @@ s3_to_redshift_nps = S3ToRedshiftOperator(
     schema = schema,
     table = table,
     copy_options=['csv'],
-    truncate_table = True,
+    method = 'REPLACE',
     redshift_conn_id = "redshift_dev_db",
     dag = dag
 )
